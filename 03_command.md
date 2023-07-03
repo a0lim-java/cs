@@ -79,6 +79,32 @@
     : 연산에 사용할 데이터를 메모리에 저장, 그 주소를 저장한 레지스터를 오퍼랜드 필드에 명시  
       ![image](https://github.com/a0lim-java/cs/assets/104348646/e76b5e7c-79c4-4192-95aa-ac581cacb602)
 
+## 3-3 소스 코드가 명령어가 되기 까지(C언어 컴파일 과정)
+![image](https://github.com/a0lim-java/cs/assets/104348646/27bb7f3e-7d79-4af0-9607-d39b252934de)
+* 전처리 과정(processsing)
+  : 본격적으로 컴파일하기 전에 처리할 작업들
+  - 외부에 선언된 다양한 소스 코드, 라이브러리 포함(ex. #include)
+  - 프로그래밍의 편의를 위해 작성된 매크로 변환(ex. #define)
+  - 컴파일할 영역 명시(ex. #if, #ifdef, ...)
+* 컴파일 과정(compiling)
+  : 전처리 완료된 소스 코드를 저급 언어(어셈블리 언어)로 변환
+  - 전처리가 완료 되어도 여전히 소스 코드 형태임
+* 어셈블 과정(assemble)
+  : 어셈블리어를 기계어로 변환
+  - 목적 코드(object file)를 포함하는 목적 파일이 됨
+* 링킹(linking)
+  : 각기 다른 목적 코드를 하나의 실행 파일로 연결시키는 작업
+  - 목적 파일 vs 실행 파일
+    + 둘 다 기계어로 이루어진 파일
+    + 목적 파일은 링킹을 거친 이후에야 실행 파일이 됨  
+  ![image](https://github.com/a0lim-java/cs/assets/104348646/dd11b282-3bbd-4c68-a168-9b17f0880601)
+-> main.c에는 HELPER_더하기 연산 작업이 없음 => main.c와 helper.c와의 연결이 필요
+
+
+
+
+
+
 
       
 
